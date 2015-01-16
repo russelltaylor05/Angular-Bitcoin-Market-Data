@@ -1,0 +1,8 @@
+
+<table class="index-table">
+  <tr><th>Country</th><th>Last Price</th></tr>
+  <tr ng-repeat="(key,value) in coins">
+    <td><a href="#/country/{{key}}">{{key}}</a></td>
+    <td>{{value.last | currency:value.symbol }}</td>
+  </tr>
+</table>

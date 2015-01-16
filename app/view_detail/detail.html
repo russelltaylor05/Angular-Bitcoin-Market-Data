@@ -1,0 +1,13 @@
+
+
+<h1>Markets Available in {{countryId}}</h1>
+
+<table class="index-table">
+  <tr><th>Country</th><th>24h AVG</th><th>High</th><th>Low</th></tr>
+  <tr ng-repeat="market in markets | filter:{currency:countryId, avg:'!null'} ">
+    <td>{{market.symbol}}</td>
+    <td>{{market.avg | currency:''}}</td>
+    <td>{{market.high | currency:''}}</td>    
+    <td>{{market.low | currency:''}}</td>        
+  </tr>
+</table>
