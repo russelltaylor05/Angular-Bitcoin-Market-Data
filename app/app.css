@@ -17,3 +17,7 @@ body {max-width: 600px; margin: 0 auto;}
 
 .index-table {}
 .index-table td {padding: 10px; border: 1px solid #ccc;}
+
+#header {padding: 10px 0;}
+
+#header .nav li {margin: 0 10px 0 0;}

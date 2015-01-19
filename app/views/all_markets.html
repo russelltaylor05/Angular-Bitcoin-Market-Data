@@ -1,0 +1,31 @@
+<h1>All Trading Markets</h1>
+
+<div class="market-filters">
+  Search Symbol: <input ng-model="query.symbol"><br><br>
+  Order By:
+  <select ng-model="orderProp">
+    <option value="symbol">Symbol</option>
+    <option value="currency">Currency</option>
+  </select>
+  <br><br>
+
+</div>
+
+<table class="table table-striped table-bordered">
+  <tr><th>Symbol</th><th>Currency</th><th>24h AVG</th><th>High</th><th>Low</th></tr>
+  <tr ng-repeat="market in markets | filter:query | filter:{avg:'!null'} | orderBy:orderProp ">
+    <td>{{market.symbol}}</td>
+    <td>{{market.currency}}</td>
+    <td>{{market.avg | currency:''}}</td>
+    <td>{{market.high | currency:''}}</td>    
+    <td>{{market.low | currency:''}}</td>        
+  </tr>
+</table>
+
+
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+</div>

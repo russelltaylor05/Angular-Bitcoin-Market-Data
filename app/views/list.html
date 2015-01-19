@@ -1,6 +1,7 @@
 
-<table class="index-table">
-  <tr><th>Country</th><th>Last Price</th></tr>
+<h1>Currencies and their Bitcoin Prices</h1>
+<table class="table table-striped table-bordered" >
+  <tr><th>Country</th><th>Avg Price</th></tr>
   <tr ng-repeat="(key,value) in coins">
     <td><a href="#/country/{{key}}">{{key}}</a></td>
     <td>{{value.last | currency:value.symbol }}</td>
